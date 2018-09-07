@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # finance
 
 ## Project setup
@@ -21,5 +21,4 @@ npm run build
 npm run lint
 ```
 =======
-# Finance-Sheets
->>>>>>> be2c4acd625b27938f26d681cc4d3ed76759fef9
+
