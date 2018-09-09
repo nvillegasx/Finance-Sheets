@@ -3,86 +3,62 @@
         
         <h3>{{ title }}</h3>
 
-        <div class="CurrentLiabilities">
+        <div class="PropertyPlantEquipment">
             <div class="row">
                 <div class="column">
-                    <span class="rowTitle">Notes Payable</span>
+                    <span class="rowTitle">Land</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="notesPayable" v-model.number="notesPayable" placeholder="0" 
-                    @keyup.enter="addItems(notesPayable,0); currVal[0].entered = true"
+                    $<input type="number" name="land" v-model.number="land" placeholder="0" 
+                    @keyup.enter="addItems(land,0); currVal[0].entered = true"
                     @keyup.delete="removeVal(0); currVal[0].entered = false"
                     v-bind:class="{ enterinput: currVal[0].entered }">
                 </div>
             </div>
             <div class="row">
                 <div class="column">
-                    <span class="rowTitle">Accounts Payable</span>
+                    <span class="rowTitle">Land Improvements</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="accountsPayable" v-model.number="accountsPayable" placeholder="0" 
-                        @keyup.enter="addItems(accountsPayable,1); currVal[1].entered = true" 
+                    $<input type="number" name="landImprovements" v-model.number="landImprovements" placeholder="0" 
+                        @keyup.enter="addItems(landImprovements,1); currVal[1].entered = true" 
                         @keyup.delete="removeVal(1); currVal[1].entered = false" 
                         v-bind:class="{ enterinput: currVal[1].entered}">
                 </div>
             </div>
-            <!-- FIX AFTER THIS THE INDEXEs -->
             <div class="row">
                 <div class="column">
-                    <span class="rowTitle">Wages Payable</span>
+                    <span class="rowTitle">Buildings</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="wagesPayable" v-model.number="wagesPayable" placeholder="0" 
-                        @keyup.enter="addItems(wagesPayable,2); currVal[2].entered = true" 
+                    $<input type="number" name="buildings" v-model.number="buildings" placeholder="0" 
+                        @keyup.enter="addItems(buildings,2); currVal[2].entered = true" 
                         @keyup.delete="removeVal(2); currVal[2].entered = false" 
                         v-bind:class="{ enterinput: currVal[2].entered}">
                 </div>
             </div>
             <div class="row">
                 <div class="column">
-                    <span class="rowTitle">Interest Payable</span>
+                    <span class="rowTitle">Equipment</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="interestPayable" v-model.number="interestPayable" placeholder="0" 
-                        @keyup.enter="addItems(interestPayable,3); currVal[3].entered = true" 
+                    $<input type="number" name="equipment" v-model.number="equipment" placeholder="0" 
+                        @keyup.enter="addItems(equipment,3); currVal[3].entered = true" 
                         @keyup.delete="removeVal(3); currVal[3].entered = false" 
                         v-bind:class="{ enterinput: currVal[3].entered}">
                 </div>
             </div>
             <div class="row">
                 <div class="column">
-                    <span class="rowTitle">Taxes Payable</span>
+                    <span class="rowTitle">Less: Accumulated Depreciation</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="taxesPayable" v-model.number="taxesPayable" placeholder="0" 
-                        @keyup.enter="addItems(taxesPayable,4); currVal[4].entered = true" 
-                        @keyup.delete="removeVal(cce, 4); currVal[4].entered = false" 
+                     -$<input type="number" name="accDepreciation" v-model.number="accDepreciation" placeholder="0" 
+                        @keyup.enter="addItems(accDepreciation*-1,4); currVal[4].entered = true" 
+                        @keyup.delete="removeVal(4); currVal[4].entered = false" 
                         v-bind:class="{ enterinput: currVal[4].entered}">
                 </div>
             </div>
-            <div class="row">
-                <div class="column">
-                    <span class="rowTitle">Warranty Liability</span>
-                </div>
-                <div class="column2">
-                    $<input type="number" name="warrantyLiability" v-model.number="warrantyLiability" placeholder="0" 
-                        @keyup.enter="addItems(warrantyLiability,5); currVal[5].entered = true" 
-                        @keyup.delete="removeVal(rm, 5); currVal[5].entered = false" 
-                        v-bind:class="{ enterinput: currVal[5].entered}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <span class="rowTitle">Unearned Revenues</span>
-                </div>
-                <div class="column2">
-                    $<input type="number" name="unearnedRev" v-model.number="unearnedRev" placeholder="0" 
-                    @keyup.enter="addItems(unearnedRev,6); currVal[6].entered = true" 
-                    @keyup.delete="removeVal(fgi, 6); currVal[6].entered = false" 
-                    v-bind:class="{ enterinput: currVal[6].entered}">
-                </div>
-            </div>
-
 
             <div class="row totalRow">
                 <div class="column">
@@ -93,13 +69,14 @@
                 </div>
             </div>            
         </div>
+
     </div>
 
 </template>
 
 <script>
 export default {
-  name: 'CurrentLiabilities',
+  name: 'PropertyPlantEquipment',
   props: {
       title: String
   },
@@ -111,9 +88,7 @@ export default {
               { amount: 0, entered: false },
               { amount: 0, entered: false },
               { amount: 0, entered: false },
-              { amount: 0, entered: false },
-              { amount: 0, entered: false },
-              { amount: 0, entered: false } 
+              { amount: 0, entered: false }
           ],
         total: 0
       }

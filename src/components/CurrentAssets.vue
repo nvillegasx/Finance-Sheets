@@ -76,8 +76,10 @@
                     <span class="rowTitle">Finished Goods / Inventory</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="ar" v-model.number="ar" placeholder="0" @keyup.enter="addItems(ar,1); currVal[1].entered = true" 
-                    @keyup.delete="removeVal(cce, 1); currVal[1].entered = false" v-bind:class="{ enterinput: currVal[1].entered}">
+                    $<input type="number" name="fgi" v-model.number="fgi" placeholder="0" 
+                    @keyup.enter="addItems(fgi,6); currVal[6].entered = true" 
+                    @keyup.delete="removeVal(fgi, 6); currVal[6].entered = false" 
+                    v-bind:class="{ enterinput: currVal[6].entered}">
                 </div>
             </div>
             <div class="row">
@@ -85,8 +87,10 @@
                     <span class="rowTitle">Prepaid Insurance</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="ar" v-model.number="ar" placeholder="0" @keyup.enter="addItems(ar,1); currVal[1].entered = true" 
-                    @keyup.delete="removeVal(cce, 1); currVal[1].entered = false" v-bind:class="{ enterinput: currVal[1].entered}">
+                    $<input type="number" name="pInsurance" v-model.number="pInsurance" placeholder="0" 
+                    @keyup.enter="addItems(pInsurance,7); currVal[7].entered = true" 
+                    @keyup.delete="removeVal(pInsurance, 7); currVal[7].entered = false" 
+                    v-bind:class="{ enterinput: currVal[7].entered}">
                 </div>
             </div>
             <div class="row">
@@ -94,8 +98,10 @@
                     <span class="rowTitle">Prepaid Expenses</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="ar" v-model.number="ar" placeholder="0" @keyup.enter="addItems(ar,1); currVal[1].entered = true" 
-                    @keyup.delete="removeVal(cce, 1); currVal[1].entered = false" v-bind:class="{ enterinput: currVal[1].entered}">
+                    $<input type="number" name="prepaidExp" v-model.number="prepaidExp" placeholder="0" 
+                    @keyup.enter="addItems(prepaidExp,8); currVal[8].entered = true" 
+                    @keyup.delete="removeVal(prepaidExp, 8); currVal[8].entered = false" 
+                    v-bind:class="{ enterinput: currVal[8].entered}">
                 </div>
             </div>
             <div class="row">
@@ -103,8 +109,10 @@
                     <span class="rowTitle">Office Supplies</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="ar" v-model.number="ar" placeholder="0" @keyup.enter="addItems(ar,1); currVal[1].entered = true" 
-                    @keyup.delete="removeVal(cce, 1); currVal[1].entered = false" v-bind:class="{ enterinput: currVal[1].entered}">
+                    $<input type="number" name="officeSupplies" v-model.number="officeSupplies" placeholder="0" 
+                    @keyup.enter="addItems(officeSupplies,9); currVal[9].entered = true" 
+                    @keyup.delete="removeVal(officeSupplies, 9); currVal[9].entered = false" 
+                    v-bind:class="{ enterinput: currVal[9].entered}">
                 </div>
             </div>
             <div class="row">
@@ -112,8 +120,10 @@
                     <span class="rowTitle">Other Current Assets</span>
                 </div>
                 <div class="column2">
-                    $<input type="number" name="ar" v-model.number="ar" placeholder="0" @keyup.enter="addItems(ar,1); currVal[1].entered = true" 
-                    @keyup.delete="removeVal(cce, 1); currVal[1].entered = false" v-bind:class="{ enterinput: currVal[1].entered}">
+                    $<input type="number" name="otherCurrAssets" v-model.number="otherCurrAssets" placeholder="0" 
+                    @keyup.enter="addItems(otherCurrAssets,10); currVal[10].entered = true" 
+                    @keyup.delete="removeVal(otherCurrAssets, 10); currVal[10].entered = false" 
+                    v-bind:class="{ enterinput: currVal[10].entered}">
                 </div>
             </div>
 
@@ -177,7 +187,7 @@ h1 {
 }
 
 .totalRow {
-    background-color: yellow;
+    background-color: rgba(43, 255, 0, 0.212);
 }
 
 .row {
